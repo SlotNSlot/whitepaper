@@ -65,7 +65,7 @@ Traditional online services expose another weak point. An online service with a 
 
 ### 2.3 Ethereum Solution
 
-<img src="https://s3.amazonaws.com/slot-n-slot-whitepaper/decentralize.png" style="max-width: 100%; height: auto;">
+<img src="https://s3.amazonaws.com/slot-n-slot-whitepaper/decentralize_v2.png" style="max-width: 100%; height: auto;">
 
 All of the problems suffered by traditional online gambles mentioned above will be relieved with Ethereum. Because the Ethereum blockchain is sustained by countless nodes around the world, a service on it is perfectly **fail-proof**. Service protocol updates can be done immediately and there’s no need for maintenance in blockchain-based server.
 
@@ -201,7 +201,7 @@ SlotNSlot deploys a semi-p2p PRNG using the Whisper protocol in Ethereum with al
 
  6. [txn] The player sends both the original numbers (N, M) to the game contract. The contract verifies (N, M), uses XOR(N,M) as a seed to generate the random numbers, and records the result.
 
-<img src="https://s3.amazonaws.com/slot-n-slot-whitepaper/randomNumberGenerator.png" style="max-width: 100%; height: auto;">
+<img src="https://s3.amazonaws.com/slot-n-slot-whitepaper/randomNumberGenerator_v2.png" style="max-width: 100%; height: auto;">
 
 In this design, both bankers and players check the fairness on-chain, while relieving much of the blockchain dependency using the semi-p2p method, _Whisper protocol_. At the same time, game results are recorded on-chain in atomic units, making the exception handling much easier.
 Although this implementation has relieved some of the prior challenges of RNGs on blockchain, it still suffers some intrinsic limitations, i.e. minimum transactions required. The team will consistently keep its efforts in developing a better design of RNG.
