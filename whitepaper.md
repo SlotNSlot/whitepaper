@@ -17,7 +17,7 @@
 ##### 5.2 Prior Attempts
 ##### 5.3 SlotNSlot Solution
 #### 6. Team 
-#### 7. Business Model
+#### 7. Profit Model
 #### 8. SlotNSlot Token (SLT)
 #### 9. Crowdsale (TBD)
 #### Appendix
@@ -30,7 +30,7 @@ Online gambling has experienced great leaps recently that has never been observe
 
 SlotNSlot aims to provide an ever-lasting, trustless, autonomous gambling platform with extremely low operation cost, where anyone in the globe can both make and play amazingly fun and incredible slot machines. With the aid of rising Ethereum world computer, the platform achieves fast and economical designs. The games are perfectly fair and transparent with a trustworthy implementation of Random Number Generator, and users can enjoy both on the web with PCs and on mobile devices. SlotNSlot platform also gives users a variety of choices with the games settings, which never had been possible in traditional markets. The experience is made further exciting with a feature of communicating through Emojis between users.
 
-Random numbers are genetated using seeds from participants to keep fairness. The exchange of this seeds between users and smart contracts takes place in a semi-p2p channel on Ethereum, Whisper, with a commit&reveal protocol to ensure there's no fraud. Unlike traditional games where the play window is determined to calculate the result, SlotNSlot game system determines the game result to inverse-calculate the play window, which is just as fair and same as the other way around, still with a huge decrease in the cost and speed of the operation.
+Random numbers are genetated using seeds from participants to keep fairness. The submission of these seeds to the smart contracts takes place in a chained order, where any user checks the opponent isn't cheating, and then takes his action. This chained commit&reveal scheme ensures there's no fraud. At current state of Ethereum, the p2p messaging protocol, Whisper, will be utilized to enable player clients quickly draw the game results. Unlike traditional games where the play window is determined to calculate the result, SlotNSlot game system determines the game result to inverse-calculate the play window, which is just as fair and mathematically equivalent as the other way around, still with a huge decrease in the cost and speed of the operation.
 
 This paper is to explain what and how SlotNSlot plans to do in detail, to achieve such goals. The team and its basic guidelines in developing the platform and the project itself is addressed. SlotNSlot platform will open a everlasting arena of slot games and change the paradigm of gambling, while representing how a project on developing a decentralized application should look like. The project will evolve eternally with the dedication of the team, community, and users all around the globe.
 
@@ -46,11 +46,15 @@ Online gambling market volume was 37.91B USD in 2015, and is forecasted to grow 
 
 <img src="https://s3.amazonaws.com/slot-n-slot-whitepaper/onlineGamblingMarketGrowth.png" style="max-width: 100%; height: auto;">
 
-As an example of gambling on Ethereum, a simple “dice” gambling service had 12,718 ETH user winnings with more than 50,000 bets over 1 year of service. They offers several dices with different win rates, from 5% to 90%. If players bet uniformly among those dices, which is actually the case at the time of writing, the house earning is at least 8-fold of that winnings, which is more than 90,000ETHs. This is a revenue equivalent of 23.4M USD. (260 USD/ETH, as of July 1st 2017)
+As an example of gambling on Ethereum, a simple “dice” gambling service had 13,684 ETH user winnings with more than 55,000 bets over 1 year of service. They offers several dices with different win rates, from 5% to 90%. If players bet uniformly among those dices, the house earning is expected to be roughly 100,000ETHs. This is a revenue equivalent of 21.0M USD. (210 USD/ETH, as of July 20th 2017)
 
-Another similar service that launched its beta on June 2017, had roughly 3,000 bets with 2500 ETH user winnings. Though the estimated revenue couldn’t be obtained due to its dynamic win rates and payout modified by the service provider, a simple projection over one year with a conservative assumption that it will neither grow nor diminish still gives 30,000 ETHs, which is 7.8M USD. (260 USD/ETH, as of July 1st 2017)
+Another similar service had roughly 7,026 bets with 4,513 ETH user winnings over roughly 100 days, as of July 20th 2017. Though the estimated revenue couldn’t be obtained due to its dynamic win rates and payout modified by the service provider, the projection from the settings at the time of writing gives 10,689 total bettings, which addes up to 37,411 over one year with a conservative assumption that it will neither grow nor diminish. This is a revenue equivalent of 7.8M USD. (210 USD/ETH, as of July 20th 2017)
 
-On top of these market estimates, SlotNSlot is estimated to profit a minimum of 10,000 ETH on its beta release in Q4 2017. This estimate is still quite conservative since i) Slot machines are much more enjoyable and popular than simple dices, ii) SlotNSlot is a multiple-role platform where anyone can make and/or play slot games, and iii) SlotNSlot beta release is scheduled to support both Web and Android. The team is and will be dedicated to developing a suitable service to realize the estimates, or even better results.
+With the estimated 55.19B USD global online gambling market in 2020, roughly 70% are coming from slots, 38.63B USD. Following table would demonstrate some estimates with several market penetration scenarios, from 1% to 20%.
+
+<img src="https://url_to_the_table.png" style="max-width: 100%; height: auto;">
+
+On top of these market estimates, SlotNSlot is estimated to profit a minimum of 10,000 ETH on its beta release in Q4 2017. This estimate is still quite conservative since i) Slot machines are much more enjoyable and popular than simple dices, ii) SlotNSlot is a multiple-role platform where anyone can make and/or play slot games, and iii) SlotNSlot supports easy access from both Web and Android. The team is and will be dedicated to developing a suitable service to realize the estimates, or even better results.
 
 ### 2.2 Typical Market Problem
 
@@ -59,6 +63,7 @@ Traditional online gambles, as well as offline ones, provide a one-way service w
 A major problem with the one-way trust of traditional gambling services is that there’s no confidence that they’re using a proper Random Number Generator(RNG). A proper RNG is key to the fairness of a gamble, since gambling should be understood as ‘equally unpredictable’ game to every single party of the table. Traditional gambling services typically doesn’t provide any information about their RNG, or even if they did there’s no way to assure that they’re telling the truth.
 
 Another huge imbalance of traditional gambling is the information asymmetry. Because they are centralized IT services with a central server, the service providers have access to a vast amount of information on user activities, enabling modification of services dynamically. On the other hand, typical piece of information offered to users on slot games is usually a pay table. Some regions might legally force casinos to provide their probability accounting reports(PARs), but this still leaves a significant barrier to the information due to its complicated procedures.
+
 On a relatively broader scope, there’s also an asymmetry on the choice of roles. For ordinary people, running a online casino, or even a single slot machine, is merely impossible since it’s rather a form of business which requires related knowledge, programming, operations on online service business, and most of all, a significant amount of bankroll. Thus, a single option of choice for most people is to decide whether they want to get into a blackbox set by those bankers, and play an unbalanced game.
 
 Traditional online services expose another weak point. An online service with a central server might suffer unstability. If the back-end server experiences failure, the service also fails at the same time. Service upgrades or regular maintenance would also temporarily suspend the service.
@@ -95,24 +100,24 @@ After creating slots, bankers can enter one of the slots owned, and watch others
 
 Players on SlotNSlot, on the other hand, are fully confident of what they’re doing. Unlike traditional slot machines, slots in this platform always notify sufficient information to players. Hit frequencies, maximum payout and the banker's balance are always visible to players. They can determine their own choices, which slot to play, how much to bet, how many lines to play, and when to quit playing. Winning or losing depends strongly on the strategy and luck.
 
-Players will choose a slot to play considering the slot settings. After entering a designated slot session, they will determine _amountBet_, the number of credits to bet each payline, and _numLines_, the number of paylines to play each spin. These value of _amountBet_ is, of course, in the range [_minBet_, _maxBet_].
-The actual amount of credit bet each spin, _spinBet_, is the product of _amountBet_ and _numLines_.
+Players will choose a slot to play considering the slot settings. After entering a designated slot session, they will determine _betAmount_, the number of credits to bet each payline, and _numLine_, the number of paylines to play each spin. These value of _betAmount_ is, of course, in the range [_minBet_, _maxBet_].
+The actual amount of credit bet each spin, _spinBet_, is the product of _betAmount_ and _numLine_.
 
-> _spinBet_ = _amountBet * numLines_
+> _spinBet_ = _betAmount * numLine_
 
-At beta launch, SlotNSlot games will provide 20 paylines. Players can choose a number among 1~20. If a player made a spin with _numLines_ = 5, then the paylines 1, 2, 3, 4, and 5 will be selected for the game. The figure below shows current design of 20 paylines in SlotNSlot, which is widely used for online slot games.
+At beta launch, SlotNSlot games will provide 20 paylines. Players can choose a number among 1~20. If a player made a spin with _numLine_ = 5, then the paylines 1, 2, 3, 4, and 5 will be selected for the game. The figure below shows current design of 20 paylines in SlotNSlot, which is widely used for online slot games.
 
 <img src="https://s3.amazonaws.com/slot-n-slot-whitepaper/win-line.png" style="max-width: 100%; height: auto;">
 
 Note that _hitFreq_ is defined as the rate of spins that give any payout to the player, which calculates over each payline the same way. This makes the slot to have more frequent payouts with more paylines because there exists a chance of coinciding hits for multiple paylines. For one spin, the probability of giving any payout looks like below formula.
 
-> _probability_ =  1 - (1 - _hitFreq_)<sup>(_numLines_)</sup>
+> _probability_ =  1 - (1 - _hitFreq_)<sup>(_numLine_)</sup>
 
 Players can utilize never-seen-before strategies in SlotNSlot. A simple example of such strategy is to play on slots with the lowest balance. Some players may find it more fascinating to play in slots with higher hit rates. This freedom of choice is available because the platform gives detailed information about slots, which was not offered in traditional gambling markets.
 
 ### 3.2 Multi Platform
 
-Much of online services are mobile dominant in recent days. SlotNSlot team is currently developing clients for both HTML5-based web and Android, and iOS will be supported soon enough. At the time of writing(as of July 1st 2017), there is no mobile slot games application running on Ethereum network. SlotNSlot team aims to develop a prototype and release the beta on Google Play Store in mid July, which will be the world first mobile slot game running on Ethereum network.
+Much of online services are mobile dominant in recent days. SlotNSlot team is currently developing clients for both HTML5-based web and Android, and iOS will be supported soon enough. At the time of writing(as of July 20th 2017), there is no mobile slot games application running on Ethereum network. SlotNSlot team aims to develop a prototype and release the beta on Google Play Store in mid July, which will be the world first mobile slot game running on Ethereum network.
 
 For the support of mobile application, the team is developing two major solutions. One is to accelerate Ethereum light node synchronization and transaction(contract) deployments. The other is to control possible issues caused by unstable network connections on mobile devices. SlotNSlot team will do the best to resolve these issues, and you will see the results on Google Play and AppStore, soon.
 
@@ -179,7 +184,7 @@ One typical way to obtain a pseudorandom number from blockchain is to utilize th
 
 RANDAO has developed a collective commit&reveal solution where some number of participants pledge certain amount of bounty and get rewarded if they honestly act in generating a random number, otherwise losing the pledge. This method has some limitations to be implemented for SlotNSlot. It requires a sufficient number of participants which may slow down the response and raise the cost due to the need for reward. Moreover, this is vulnerable to DDoS attacks, endangering the entire system.
 
-Dao.Casino implemented a per-transaction strategy. A pair of private and public key is generated by an banker and the public key is stored in the contract. Then a random number is sent from the player and encrypted by the banker. The contract then verifies the encrypted public key with the existing one, and generates the random number. This implementation uses numerous transactions for each bet, affecting both the response and cost.
+Dao.Casino implemented a per-transaction strategy. A pair of private and public key is generated by an banker and the public key is stored in the contract. Then a random number is sent from the player and encrypted by the banker. The contract then verifies the encrypted public key with the existing one, and generates the random number. This implementation uses numerous transactions for each bet, affecting both the response and cost. (edit: Dao.Casino announced on July 12th 2017 that they'll be using state-channel solutions.)
 
 iDice utilized an intermediary between blockchain and an external RNG service, Oraclize. This also requires a number of transactions between the game contract and the Oraclize contract, thus having a high dependency on blockchain confirmation time and cost. Furthermore, this solution is not a provably fair one since an external service cannot be ensured to be honest.
 
@@ -187,24 +192,25 @@ FunFair solved much of these issues by implementing a state channel design, whic
 
 ### 5.3 SlotNSlot Solution
 
-SlotNSlot deploys a semi-p2p PRNG using the Whisper protocol in Ethereum with all those prior challenges in consideration, which is achieved in following order.
+SlotNSlot deploys a hash chain commit & reveal scheme to both prevent manipulations and reduce transactions required. Using a commit & reveal scheme to accept seeds from users ensures no chance of manipulation and equal unpredictability. As this scheme is extended to a chained model, there's less need for transactions. A single round of commit & reveal would require 4 transactions with 2 users. In a chained model, every revelation is at the same time commitment to next round, thus reducing the transactions in half. However, in SlotNSlot design, players would want to change their betting choices(_betAmount_, _numLine_) in every bet. If the player was to reveal first in every bet, these betting choices could also be sent within the same transaction. But as the banker aborting the result is more serious than the player aborting, players had to be the last to reveal. For this reason, every betting would require exactly 3 transactions on the blockchain.
 
- 1. [p2p] A player triggers a spin in the slot, calling the banker to send his own encrypted random number N’ (= SHA3(N)) with Whisper protocol.
+ 1. A player visits a slot machine, sends the last commit of hash chain, SHA<sup>R</sup>(N) with a specific amount of ETH to play on this slot. A successful confirmation of this transaction would modify the slot as occupied, and trigger an EVENT that would notify the banker that someone has visited his slot.
 
- 2. [txn] The player generates his own encrypted random number M’ (=SHA3(M)) which isn’t used previously, and send it to the game contract with N’.
+ 2. The banker sends the last commit of hash chain. On confirmation of this transaction, the game session between these two specific "player" and "banker" will be initialized.
 
- 3. [txn] The game contract id is sent to player.
+ 3. The player sends betting parameters _betAmount_, and _numLine_ to the contract.
 
- 4. [p2p] Player sends his M’ with game contract id to the banker to verify the game.
+ 4. The banker verifies whether the player's transaction is valid. After successful verification, the banker reveals the preimage. To enable a faster response in the player's client, banker's client will send the same preimage with the Whisper protocol. Note that hashing this preimage would give the revelation of the banker in previous round.
 
- 5. [p2p] The banker verifies the game, and sends his original N to the player.
+ 5. Player's client begins to draw the resulting window with the player's preimage and the banker's preimage received from whisper. The player verifies whether the banker's transaction is valid. After successful verification, the player reveals the preimage.
 
- 6. [txn] The player sends both the original numbers (N, M) to the game contract. The contract verifies (N, M), uses XOR(N,M) as a seed to generate the random numbers, and records the result.
+ 6. A successful confirmation of all transactions in steps 3 to 5 will trigger the contract to process the round. The contract verifies both seeds, uses them to generate random numbers for the round, and stores the result.
 
 <img src="https://s3.amazonaws.com/slot-n-slot-whitepaper/randomNumberGenerator_v2.png" style="max-width: 100%; height: auto;">
 
-In this design, both bankers and players check the fairness on-chain, while relieving much of the blockchain dependency using the semi-p2p method, _Whisper protocol_. At the same time, game results are recorded on-chain in atomic units, making the exception handling much easier.
-Although this implementation has relieved some of the prior challenges of RNGs on blockchain, it still suffers some intrinsic limitations, i.e. minimum transactions required. The team will consistently keep its efforts in developing a better design of RNG.
+Steps 1 and 2 occurs exactly once everytime a player visits a slot. Steps 3 to 6 takes place for every betting player triggers. Step 6 is an automatic internal transaction that is triggered by the last transaction mined among steps 3 to 5. Thus, initializing the game session requires 2 transactions, and every betting in the session requires 3 transactions.
+
+In the design, fairness is ensured with chained commit & reveal scheme. At the same time, game results are recorded on-chain in atomic units, making the exception handling much easier as well as ensuring 100% transparency. _Whisper protocol_ would enable fast responses in player client. Although this implementation has relieved some of the prior challenges of RNGs on blockchain, it still suffers some intrinsic limitations, i.e. minimum transactions required. The team will consistently keep its efforts in developing a better design of RNG, especially in response to modifications in Ethereum blockchain: Metropolis, Casper(PoS), Serenity, etc.
 
 * * *
 
@@ -218,29 +224,40 @@ The team currently consists of 7 developers with degrees in Computer Science and
 
 * * *
 
-# 7. Business Model
+# 7. Profit Model
 
-The major sources of profit are expected to be  
+The major sources of profit are planned to be  
 * % fees from slot games, and  
 * fees paid to send Emojis.  
 
-> A detailed business model is to be determined soon.
+For every game session between a player and a banker, % fee will be charged to the user who's leaving the session with positive winnings. Currently the team is considering 1% fee. Thus, a player winning 10 ETH from a slot game will be charged 0.1 ETH as platform fee, and the same applies to bankers when winning.
+
+There're some other possible models in consideration, such as i) charging fees every time players and bankers deposit ETH in a slot game, ii) charging "fixed fees" every MAKEs and PLAYs, and etc. The team currently believes the one explained above is most reasonable. Final decision will definitely be applied before launching the actual product on Mainnet.
+
+Price model for Emojis will be determined in later stage of the project since it's in early development stage, but it would probably be a %-based fee on huge winnings or bankruptcies, which are the cases when users would definitely want to express their emotions.
 
 * * *
 
-# 8. SlotNSlot Token (SLT)
+# 8. SlotNSlot Token (SLT, subject to change)
 
-SLT token is solely for dividend yields. Any profits made on SlotNSlot platform will be cumulated in its public wallet, and distributed token holders in proportion to the amount they hold. Total number of tokens will be fixed at the very first issuance and ever. Major guides are as follows.
+SLT token is solely for dividend yields. Any profits made on SlotNSlot platform will be cumulated in its public contract, and distributed to token holders in proportion to the amount they hold. Total number of tokens will be fixed at the very first issuance and ever. To protect investors, tokens reserved for development team will be locked up to 365 days after the first revenue share is witnessed from the platform.
 
-- The team still must possess at least 10% of the total amount issued, to encourage the team for better engagement.
-- Every use of funds raised from crowdsale should be inscribed with a specified purpose.
-- In determining the details of crowdsale, embrace as much suggestions from the communities as possible
+For every 100,000 blocks mined in Ethereum, 95% of profit stacked in the contract will be distributed to token holders, and 5% will be left for buffers.
 
-> the details of SLT and its crowdsale will be updated soon
+>_An alternative model was suggested by a potential investor, where stacked profits are used to buy out and burn SLT tokens. The team is developing a draft model for this, and will be discussing it on communities to find out if this would work._
+
+In future decisions when determining details about SlotNSlot token or any other relevant, major guides will be as follows.
+
+- In determining the details of tokens and crowdsale, embrace as much suggestions from the communities as possible.
+- Every aspect would be determined with investor benefits and improvement of the project as top priorities.
+- It should never harm the Ethereum & DApp society.
 
 * * *
 
-# 9. Crowdsale (TBD)
+# 9. Crowdsale (Subject to change)
+
+
+
 
 * * *
 
@@ -365,9 +382,9 @@ August 2016, Intelliroi, https://www.researchandmarkets.com/research/hdl474/glob
 
 [5] Dao.Casino Whitepaper, https://github.com/DaoCasino, retrieved on July 1st 2017.
 
-[6] iDice - Ethereum dice beta release, https://iDice.io, retrieved on July 1st 2017.
+[6] iDice - Ethereum dice beta release, https://iDice.io, retrieved on July 20th 2017.
 
-[7] vDice - The most popular ether betting games in the universe, https://vDice.io, retrieved on July 1st 2017.
+[7] vDice - The most popular ether betting games in the universe, https://vDice.io, retrieved on July 20th 2017.
 
 [8] Edgeless - Decentralised Edgeless CASINO, https://edgeless.io, retrieved on July 6th 2017.
 
@@ -390,6 +407,8 @@ August 2016, Intelliroi, https://www.researchandmarkets.com/research/hdl474/glob
 [16] _Elements Of Slot Design - 2nd Edition_, GameDesignAutomation, 2013, http://slotdesigner.com/wp/wp-content/uploads/Elements-of-Slot-Design-2nd-Edition.pdf, retrieved on June 26th 2017.
 
 [17] Ethereum whitepaper, https://github.com/ethereum/wiki/wiki/White-Paper, retrieved on June 15th 2017.
+
+[18] _Sit and Spin - How slot machines give gamblers the business_, Marc Cooper, December 2005, https://www.theatlantic.com/magazine/archive/2005/12/sit-and-spin/304392/, retrieved on July 20th 2017.
 
 * * *
 
