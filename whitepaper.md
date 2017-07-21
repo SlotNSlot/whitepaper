@@ -265,7 +265,7 @@ In future decisions when determining details about SlotNSlot token or any other 
 
 **End date**: Crowdsale event ends with the earliest among followings.  
 i) Two weeks after start date. [08:00 AM UTC, September 3rd 2017]  
-ii) 1 billion SLT issued
+ii) 100,000 ETH hard cap achieved.
 
 **Price**:  
 12,000 SLT = 1 ETH : 20% bonus during the first 24 hours  
