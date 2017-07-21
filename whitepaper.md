@@ -1,11 +1,11 @@
 # Table of Contents
 * * *
-#### 1. Introduction
-#### 2. Market Analysis
-##### 2.1 Market Size
-##### 2.2 Typical Market Problem
-##### 2.3 Ethereum Solution
-#### 3. SlotNSlot Platform
+#### 1. Introduction [jump](#1-introduction-1)
+#### 2. Market Analysis [jump](#2-market-analysis-1)
+##### 2.1 Market Size [jump](#21-market-size-1)
+##### 2.2 Typical Market Problem [jump](#22-typical-market-problem-1)
+##### 2.3 Ethereum Solution [jump](#23-ethereum-solution-1)
+#### 3. SlotNSlot Platform [jump](#head1)
 ##### 3.1 Make or Play
 ##### 3.2 Multi Platform
 ##### 3.3 Send Emoji
@@ -55,7 +55,7 @@ Another similar service had roughly 7,026 bets with 4,513 ETH user winnings over
 
 With the estimated 55.19B USD global online gambling market in 2020, roughly 70% are coming from slots, 38.63B USD. Following table would demonstrate some estimates with several market penetration scenarios, from 1% to 20%.
 
-![market_pen_table](images/market_pen_table.png)
+![marketProjection](images/marketProjection.png)
 
 On top of these market estimates, SlotNSlot is estimated to profit a minimum of 10,000 ETH on its beta release in Q4 2017. This estimate is still quite conservative since i) Slot machines are much more enjoyable and popular than simple dices, ii) SlotNSlot is a multiple-role platform where anyone can make and/or play slot games, and iii) SlotNSlot supports easy access from both Web and Android. The team is and will be dedicated to developing a suitable service to realize the estimates, or even better results.
 
@@ -85,7 +85,7 @@ Lastly and most importantly, SlotNSlot uses a Pseudo Random Number Generator(PRN
 
 * * *
 
-# 3. SlotNSlot Platform
+# <a name="head1">3. SlotNSlot Platform</a>
 
 ### 3.1 Make or Play
 
