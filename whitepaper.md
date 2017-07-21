@@ -47,7 +47,7 @@ Global gambling market is steadily growing. Especially, its online counterpart i
 
 Online gambling market volume was 37.91B USD in 2015, and is forecasted to grow with approximated 9.5% of CAGR until 2020. With high penetration of network access and mobile devices worldwide, the market will grow further if a trustful and enjoyable service was introduced. The fact that users are free of burdens and risks of carrying cash would boost it much more. SlotNSlot on top of Ethereum technology will play a major role in this rise.
 
-<img src="https://s3.amazonaws.com/slot-n-slot-whitepaper/onlineGamblingMarketGrowth.png" style="max-width: 100%; height: auto;">
+![onlineGamblingMarketGrowth](images/onlineGamblingMarketGrowth.png)
 
 As an example of gambling on Ethereum, a simple “dice” gambling service had 13,684 ETH user winnings with more than 55,000 bets over 1 year of service. They offers several dices with different win rates, from 5% to 90%. If players bet uniformly among those dices, the house earning is expected to be roughly 100,000ETHs. This is a revenue equivalent of 21.0M USD. (210 USD/ETH, as of July 20th 2017)
 
@@ -55,7 +55,7 @@ Another similar service had roughly 7,026 bets with 4,513 ETH user winnings over
 
 With the estimated 55.19B USD global online gambling market in 2020, roughly 70% are coming from slots, 38.63B USD. Following table would demonstrate some estimates with several market penetration scenarios, from 1% to 20%.
 
-<img src="https://url_to_the_table.png" style="max-width: 100%; height: auto;">
+![market_pen_table](images/market_pen_table.png)
 
 On top of these market estimates, SlotNSlot is estimated to profit a minimum of 10,000 ETH on its beta release in Q4 2017. This estimate is still quite conservative since i) Slot machines are much more enjoyable and popular than simple dices, ii) SlotNSlot is a multiple-role platform where anyone can make and/or play slot games, and iii) SlotNSlot supports easy access from both Web and Android. The team is and will be dedicated to developing a suitable service to realize the estimates, or even better results.
 
@@ -73,7 +73,7 @@ Traditional online services expose another weak point. An online service with a 
 
 ### 2.3 Ethereum Solution
 
-<img src="https://s3.amazonaws.com/slot-n-slot-whitepaper/decentralize_v2.png" style="max-width: 100%; height: auto;">
+![decentralize_v2](images/decentralize.png)
 
 All of the problems suffered by traditional online gambles mentioned above will be relieved with Ethereum. Because the Ethereum blockchain is sustained by countless nodes around the world, a service on it is perfectly **fail-proof**. Service protocol updates can be done immediately and there’s no need for maintenance in blockchain-based server.
 
@@ -110,7 +110,7 @@ The actual amount of credit bet each spin, _spinBet_, is the product of _betAmou
 
 At beta launch, SlotNSlot games will provide 20 paylines. Players can choose a number among 1~20. If a player made a spin with _numLine_ = 5, then the paylines 1, 2, 3, 4, and 5 will be selected for the game. The figure below shows current design of 20 paylines in SlotNSlot, which is widely used for online slot games.
 
-<img src="https://s3.amazonaws.com/slot-n-slot-whitepaper/win-line.png" style="max-width: 100%; height: auto;">
+![winline](images/winline.png)
 
 Note that _hitFreq_ is defined as the rate of spins that give any payout to the player, which calculates over each payline the same way. This makes the slot to have more frequent payouts with more paylines because there exists a chance of coinciding hits for multiple paylines. For one spin, the probability of giving any payout looks like below formula.
 
@@ -124,7 +124,7 @@ Much of online services are mobile dominant in recent days. SlotNSlot team is cu
 
 For the support of mobile application, the team is developing two major solutions. One is to accelerate Ethereum light node synchronization and transaction(contract) deployments. The other is to control possible issues caused by unstable network connections on mobile devices. SlotNSlot team will do the best to resolve these issues, and you will see the results on Google Play and AppStore, soon.
 
-<img src="https://s3.amazonaws.com/slot-n-slot-whitepaper/multi-platform.png" style="max-width: 100%; height: auto;">
+![multi-platform](images/multiplatform.png)
 
 ### 3.3 Send Emoji
 
@@ -171,7 +171,7 @@ _The team is aware of some possible issues implementing this logic. The issues a
 
 	* Though it might feel strange to have different result screens, it still doesn’t affect neither the fairness nor the result of the game. The logic is still preferred due to its extremely low gas consumption. A detailed description about the algorithm to generate the result screen is included in Appendix.
 
-_The team is open to any debates in any channel for improving the service. If you have any concerns and suggestions about the service, please contact the team with Github, Twitter, Hipchat or any other communication channels._
+_The team is open to any debates in any channel for improving the service. If you have any concerns and suggestions about the service, please contact the team with [Github](https://github.com/SlotNSlot/SlotNSlot), [Twitter](https://twitter.com/slotnslot), [Hipchat](https://www.hipchat.com/gIUbFZBvh) or any other communication channels._
 
 * * *
 
@@ -209,7 +209,7 @@ SlotNSlot deploys a hash chain commit & reveal scheme to both prevent manipulati
 
  6. A successful confirmation of all transactions in steps 3 to 5 will trigger the contract to process the round. The contract verifies both seeds, uses them to generate random numbers for the round, and stores the result.
 
-<img src="https://s3.amazonaws.com/slot-n-slot-whitepaper/randomNumberGenerator_v2.png" style="max-width: 100%; height: auto;">
+![randomNumberGenerator_ver2](images/randomNumberGenerator.png)
 
 Steps 1 and 2 occurs exactly once everytime a player visits a slot. Steps 3 to 6 takes place for every betting player triggers. Step 6 is an automatic internal transaction that is triggered by the last transaction mined among steps 3 to 5. Thus, initializing the game session requires 2 transactions, and every betting in the session requires 3 transactions.
 
@@ -221,7 +221,7 @@ In the design, fairness is ensured with chained commit & reveal scheme. At the s
 
 The team is currently working in a country where legislation on cryptocurrencies is not built. The country strictly bans online gambling with any currencies considered as valuable, domestic or global. Though a legislation doesn’t exist yet, the team still desires to avoid any means of legal issues in the region. For the time being, no exact identification of any team member will be revealed. The team sincerely appreciate generous understanding.
 
-Instead of posting personal information, the team will validate credibility by source codes and open communications on the web. The team would appreciate and diligently participate in any means of debates, questions, corrections, requests, and feedbacks on the relevant communication channels. Currently this will include the team’s Github, Twitter, and Hipchat. With the concept of Decentralized Autonomous Organization(DAO) in mind, the team’s major role is believed to be developing core smart contracts to build a decentralized application. The platform will then run on an autonomous consensus between token holders.
+Instead of posting personal information, the team will validate credibility by source codes and open communications on the web. The team would appreciate and diligently participate in any means of debates, questions, corrections, requests, and feedbacks on the relevant communication channels. Currently this will include the team’s [Github](https://github.com/SlotNSlot/SlotNSlot), [Twitter](https://twitter.com/slotnslot), [Hipchat](https://www.hipchat.com/gIUbFZBvh), and [Medium](https://medium.com/@kkenji1024). With the concept of Decentralized Autonomous Organization(DAO) in mind, the team’s major role is believed to be developing core smart contracts to build a decentralized application. The platform will then run on an autonomous consensus between token holders.
 
 The team currently consists of 7 developers with degrees in Computer Science and Electronic Engineering, on top of years of experience in relevant fields, 1 UI/UX designer with great skills and experience, and 2 project managers who are serial entrepreneurs as well. The team works in a decent work environment where it can make quick responses and decisions while operating the tasks efficiently.
 
