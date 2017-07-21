@@ -1,6 +1,6 @@
 # Table of Contents
 * * *
-#### 1. Introduction [jump](#head1)
+#### 1. [Introduction](#head1)
 #### 2. Market Analysis [jump](#head2)
 ##### 2.1 Market Size [jump](#head3)
 ##### 2.2 Typical Market Problem [jump](#head4)
