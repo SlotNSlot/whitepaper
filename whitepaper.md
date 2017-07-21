@@ -19,7 +19,10 @@
 #### 6. Team 
 #### 7. Profit Model
 #### 8. SlotNSlot Token (SLT)
-#### 9. Crowdsale (TBD)
+#### 9. Crowdsale
+##### 9.1 Crowdsale Event
+##### 9.2 Investor Protection
+##### 9.3 Use of Fund
 #### Appendix
 
 * * *
@@ -256,8 +259,49 @@ In future decisions when determining details about SlotNSlot token or any other 
 
 # 9. Crowdsale (Subject to change)
 
+### 9.1 Crowdsale Event
 
+**Start date**: Exactly 30 days after posting the _Crowdsale Details_ article.
+**End date**: Crowdsale event ends with the earliest among followings.
+i) Two weeks after start date.
+ii) 1 billion SLT issued
+**Price**:
+12,000 SLT = 1 ETH : 20% bonus during the first 24 hours
+10,000 SLT = 1 ETH : after 24 hours until end of crowdsale event
+**Foundation reserve**: At the end of crowdsale, tokens equivalent to 25% of amount issued during the crowdsale will be reserved for SlotNSlot team. Thus, the team would be holding 20% of the total tokens issued. These tokens will be locked up to the date 1 year after the very first profit share from the platform is witnessed.
+**Currencies**: Probably only Ether (ETH) will be accepted for the crowdsale. This is mainly because the fund raised during crowdsale period will be controlled with an upper bound on yearly withdrawal. Controlling this along with other currencies seems to be quite difficult at the moment. The team will be investigating possible breakthroughs including third-party services to accept several optional currencies.
 
+### 9.2 Investor Protection
+
+SlotNSlot token contracts and crowdsale funds contracts will be constructed in such way to support several methods to protect investors. These methodologies are to protect i) investors' token value, and ii) funds raised by investors.
+
+There will be an **yearly upper bound** on use of funds, which will initially set to 10,000 ETH. Any withdrawal of the funds within one year exceeding that amount will trigger a proposal of voting to the investors. The proposal then will be announced to all relevant communication channels, communities, and websites, of course including the SlotNSlot official webpage.
+
+Proposals will be announced for a period long enough to notify most investors, and thereafter investors will have 72 hours to vote on the proposal. More than 50% of voters agreeing to the proposal would accept additional use of fund. Investors will also have chances to make proposals to modify the yearly cap.
+
+Any **remaining funds** after either successful deploy and shift of project to an autonomous form or suspension, would be **left to investor decisions**. They'll be either i) refunded to token holders, ii) used to burn out tokens, or iii) utilized for further improvements by such means like bounty. 
+
+The team would always try to keep **transparency on use of funds**. There will be a real time tracker of how much fund is used, aside the official webpage. At the same time, monthly reports on use of funds will be uploaded to communication channels as well.
+
+**Lock-ups** will be utilized to **protect investors' token values**. The reserve tokens for the team, 20% of total, will be locked up for 1 year as described above. Any investors with more than 10,000,000 SLT will receive tokens exceeding that amount with lock up for 100 days. An investor contributing for 30,000,000 SLT would have 10,000,000 SLT free to trade right after crowdsale, and 20,000,000 SLT locked up for 100 days. This is to prevent large investors pumping their ETH by dumping SLT.
+
+Most importantly, investors will always have right to propose certain decisions on the project fund. With transpareny on the use of fund and protection on token values, investors will have clear, secure, and definite control over their investment. For more details and reasons for the crowdsale & fund details, refer to our Medium post on [_crowdsale details_](url=url).
+
+### 9.3 Use of Fund
+
+ - Operational cost (40%)  
+   - Office rent  
+   - Salary  
+   - Web server fee  
+   - Legal & Administrative costs  
+ - Marketing (30%)  
+   - Advertisements  
+   - Jackpot/Lottery promotions  
+   - Free trial ETH on first-time users  
+ - Third-party licenses & developments (30%)  
+   - Design resources  
+   - Additional game designs/licenses  
+   - Bounty
 
 * * *
 
