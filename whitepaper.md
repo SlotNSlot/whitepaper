@@ -261,14 +261,18 @@ In future decisions when determining details about SlotNSlot token or any other 
 
 ### 9.1 <a name="head21">Crowdsale Event</a> [[back to top]](#top)
 
-**Start date**: Exactly 30 days after posting the _Crowdsale Details_ article.
-**End date**: Crowdsale event ends with the earliest among followings.
-i) Two weeks after start date.
+**Start date**: 08:00 AM UTC, August 20th 2017. (exactly 30 days after posting [_crowdsale details_](https://medium.com/@kkenji1024/better-ico-investors-must-be-protected-84b760fda5f0))  
+
+**End date**: Crowdsale event ends with the earliest among followings.  
+i) Two weeks after start date. [08:00 AM UTC, September 3rd 2017]  
 ii) 1 billion SLT issued
-**Price**:
-12,000 SLT = 1 ETH : 20% bonus during the first 24 hours
+
+**Price**:  
+12,000 SLT = 1 ETH : 20% bonus during the first 24 hours  
 10,000 SLT = 1 ETH : after 24 hours until end of crowdsale event
+
 **Foundation reserve**: At the end of crowdsale, tokens equivalent to 25% of amount issued during the crowdsale will be reserved for SlotNSlot team. Thus, the team would be holding 20% of the total tokens issued. These tokens will be locked up to the date 1 year after the very first profit share from the platform is witnessed.
+
 **Currencies**: Probably only Ether (ETH) will be accepted for the crowdsale. This is mainly because the fund raised during crowdsale period will be controlled with an upper bound on yearly withdrawal. Controlling this along with other currencies seems to be quite difficult at the moment. The team will be investigating possible breakthroughs including third-party services to accept several optional currencies.
 
 ### 9.2 <a name="head22">Investor Protection</a> [[back to top]](#top)
@@ -285,7 +289,7 @@ The team would always try to keep **transparency on use of funds**. There will b
 
 **Lock-ups** will be utilized to **protect investors' token values**. The reserve tokens for the team, 20% of total, will be locked up for 1 year as described above. Any investors with more than 10,000,000 SLT will receive tokens exceeding that amount with lock up for 100 days. An investor contributing for 30,000,000 SLT would have 10,000,000 SLT free to trade right after crowdsale, and 20,000,000 SLT locked up for 100 days. This is to prevent large investors pumping their ETH by dumping SLT.
 
-Most importantly, investors will always have right to propose certain decisions on the project fund. With transpareny on the use of fund and protection on token values, investors will have clear, secure, and definite control over their investment. For more details and reasons for the crowdsale & fund details, refer to our Medium post on [_crowdsale details_](url=url).
+Most importantly, investors will always have right to propose certain decisions on the project fund. With transpareny on the use of fund and protection on token values, investors will have clear, secure, and definite control over their investment. For more details and reasons for the crowdsale & fund details, refer to our Medium post on [_crowdsale details_](https://medium.com/@kkenji1024/better-ico-investors-must-be-protected-84b760fda5f0).
 
 ### 9.3 <a name="head23">Use of Fund</a> [[back to top]](#top)
 
