@@ -1,13 +1,13 @@
 # Table of Contents
 * * *
-#### 1. Introduction [jump](#1-introduction-1)
-#### 2. Market Analysis [jump](#2-market-analysis-1)
-##### 2.1 Market Size [jump](#21-market-size-1)
-##### 2.2 Typical Market Problem [jump](#22-typical-market-problem-1)
-##### 2.3 Ethereum Solution [jump](#23-ethereum-solution-1)
-#### 3. SlotNSlot Platform [jump](#head1)
-##### 3.1 Make or Play
-##### 3.2 Multi Platform
+#### 1. Introduction [jump](#head1)
+#### 2. Market Analysis [jump](#head2)
+##### 2.1 Market Size [jump](#head3)
+##### 2.2 Typical Market Problem [jump](#head4)
+##### 2.3 Ethereum Solution [jump](#head5)
+#### 3. SlotNSlot Platform [jump](#head6)
+##### 3.1 Make or Play [jump](#head7)
+##### 3.2 Multi Platform [jump](#head8)
 ##### 3.3 Send Emoji
 ##### 3.4 Fair & Transparent
 ##### 3.5 Low Cost
@@ -27,7 +27,7 @@
 
 * * *
 
-# 1. Introduction
+# 1. <a name="head1">Introduction</a>
 
 Online gambling has experienced great leaps recently that has never been observed before. A huge portion of revenues in the market comes from video slot machines, leaving significant market potentials if tran\sferred to a better platform. Traditional slot game platforms, offline casinos or online video slot machines, provided players with limited choices, little information about games, and a great burden and risk of one-directional trust.
 
@@ -39,9 +39,9 @@ This paper is to explain what and how SlotNSlot plans to do in detail, to achiev
 
 * * *
 
-# 2. Market Analysis
+# 2. <a name="head2">Market Analysis</a>
 
-### 2.1 Market Size
+### 2.1 <a name="head3">Market Size</a>
 
 Global gambling market is steadily growing. Especially, its online counterpart is increasing rapidly, leading the whole market growth. From 2006 to 2010, global gambling market showed 5% of compound annual growth rate(CAGR), while it was estimated to increase to 10% during 2011~2015. This doubling of growth rate is surely due to the growth of online gambling market.
 
@@ -59,7 +59,7 @@ With the estimated 55.19B USD global online gambling market in 2020, roughly 70%
 
 On top of these market estimates, SlotNSlot is estimated to profit a minimum of 10,000 ETH on its beta release in Q4 2017. This estimate is still quite conservative since i) Slot machines are much more enjoyable and popular than simple dices, ii) SlotNSlot is a multiple-role platform where anyone can make and/or play slot games, and iii) SlotNSlot supports easy access from both Web and Android. The team is and will be dedicated to developing a suitable service to realize the estimates, or even better results.
 
-### 2.2 Typical Market Problem
+### 2.2 <a name="head4">Typical Market Problem</a>
 
 Traditional online gambles, as well as offline ones, provide a one-way service where the only one thing that users could do is to put their money in the machines and trigger spin, or nothing. This one-way service is valid only when users fully trust the service provider. In other words, users were playing on slots believing, or hoping, that the service providers not be a fraud. This one-directional trust causes several problems. The service providers might vanish with all user deposits, especially when it’s provided in a country where online casinos are illegal. In some occasions, service providers deny to give out deposits on users with extremely high payouts.
 
@@ -71,7 +71,7 @@ On a relatively broader scope, there’s also an asymmetry on the choice of role
 
 Traditional online services expose another weak point. An online service with a central server might suffer unstability. If the back-end server experiences failure, the service also fails at the same time. Service upgrades or regular maintenance would also temporarily suspend the service.
 
-### 2.3 Ethereum Solution
+### 2.3 <a name="head5">Ethereum Solution</a>
 
 ![decentralize_v2](images/decentralize.png)
 
@@ -85,9 +85,9 @@ Lastly and most importantly, SlotNSlot uses a Pseudo Random Number Generator(PRN
 
 * * *
 
-# <a name="head1">3. SlotNSlot Platform</a>
+# <a name="head6">3. SlotNSlot Platform</a>
 
-### 3.1 Make or Play
+### 3.1 <a name="head7">Make or Play</a>
 
 SlotNSlot is a platform that offers easy slot mechine creation for users who want to be a slot banker, and slots list with enough information for others who want to play. Unlike traditional online casinos, people in SlotNSlot have a chance to decide whether they will be a slot banker or just play slots others make. They may have a strategic option and make a strategic decision to win the game after considering their budget, slots list and etc. SlotNSlot team believe that this will bring a brand new pradigm to the scene.
 
@@ -118,7 +118,7 @@ Note that _hitFreq_ is defined as the rate of spins that give any payout to the 
 
 Players can utilize never-seen-before strategies in SlotNSlot. A simple example of such strategy is to play on slots with the lowest balance. Some players may find it more fascinating to play in slots with higher hit rates. This freedom of choice is available because the platform gives detailed information about slots, which was not offered in traditional gambling markets.
 
-### 3.2 Multi Platform
+### 3.2 <a name="head8">Multi Platform</a>
 
 Much of online services are mobile dominant in recent days. SlotNSlot team is currently developing clients for both HTML5-based web and Android, and iOS will be supported soon enough. At the time of writing(as of July 20th 2017), there is no mobile slot games application running on Ethereum network. SlotNSlot team aims to develop a prototype and release the beta on Google Play Store in mid July, which will be the world first mobile slot game running on Ethereum network.
 
