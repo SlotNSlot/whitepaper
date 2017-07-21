@@ -8,22 +8,22 @@
 #### 3. SlotNSlot Platform [jump](#head6)
 ##### 3.1 Make or Play [jump](#head7)
 ##### 3.2 Multi Platform [jump](#head8)
-##### 3.3 Send Emoji
-##### 3.4 Fair & Transparent
-##### 3.5 Low Cost
-#### 4. Game Design
-#### 5. Pseudo Random Number Generator (PRNG)
-##### 5.1 Motivation
-##### 5.2 Prior Attempts
-##### 5.3 SlotNSlot Solution
-#### 6. Team 
-#### 7. Profit Model
-#### 8. SlotNSlot Token (SLT)
-#### 9. Crowdsale
-##### 9.1 Crowdsale Event
-##### 9.2 Investor Protection
-##### 9.3 Use of Fund
-#### Appendix
+##### 3.3 Send Emoji [jump](#head9)
+##### 3.4 Fair & Transparent [jump](#head10)
+##### 3.5 Low Cost [jump](#head11)
+#### 4. Game Design [jump](#head12)
+#### 5. Pseudo Random Number Generator (PRNG) [jump](#head13)
+##### 5.1 Motivation [jump](#head14)
+##### 5.2 Prior Attempts [jump](#head15)
+##### 5.3 SlotNSlot Solution [jump](#head16)
+#### 6. Team [jump](#head17)
+#### 7. Profit Model [jump](#head18)
+#### 8. SlotNSlot Token (SLT) [jump](#head19)
+#### 9. Crowdsale [jump](#head20)
+##### 9.1 Crowdsale Event [jump](#head21)
+##### 9.2 Investor Protection [jump](#head22)
+##### 9.3 Use of Fund [jump](#head23)
+#### Appendix [jump](#head24)
 
 * * *
 
@@ -126,13 +126,13 @@ For the support of mobile application, the team is developing two major solution
 
 ![multi-platform](images/multiplatform.png)
 
-### 3.3 Send Emoji
+### 3.3 <a name="head9">Send Emoji</a>
 
 One of the key features of SlotNSlot is the communication between users via Emojis. Example of such feature can be found in one-on-one arena video games such as _Clash Royale_ or _Hearthstone_. The team expects such quick expression of emotions between users will make far more exciting user experiences in SlotNSlot.
 
 Bankers and players can send Emoji at certain situations to express their emtions to their opponent. It is expected that users will actively use Emojis when they're in extreme sentiments. e.g. out of anger that they lost a huge bet, or joy that they got a decent prize. Sending Emoji is a paid feature, which usually activates when players get huge prizes or the opponent gets bankrupt. Costs paid to send Emoji are transferred to the platform’s public wallet and distributed to token holders periodically. This will make up a significant portion of profit in SlotNSlot business model.
 
-### 3.4 Fair & Transparent
+### 3.4 <a name="head10">Fair & Transparent</a>
 
 With Ethereum network and smart contracts in its backend, every single information on SlotNSlot cannot be hidden from anyone, from slot settings and balances to every play history. When players visit slots, the parameters set on them are all visible, so players can always know what they are doing.
 
@@ -140,7 +140,7 @@ Games in SlotNSlot are provably fair due to its PRNG. Being provably fair on a g
 
 Play histories and remaining balances are always available to both bankers and players. For those who are more knowledgeable about computer programs, all source codes for SlotNSlot service are recorded on Github repositories. The team will always keep recent updates with every information channels. 
 
-### 3.5 Low Cost
+### 3.5 <a name="head11">Low Cost</a>
 
 While storing all play histories on blockchain, the games are played partially off-chain, utilizing a semi-p2p communication protocol between the banker and the player. Games are played and recorded with minimum on-chain transactions, thus reducing the cost significantly.
 	
@@ -148,7 +148,7 @@ Unlike traditional “platform” businesses, SlotNSlot has no middleman. The pl
 
 * * *
 
-# 4. Game Design
+# 4. <a name="head12">Game Design</a>
 
 Unlike usual slot machines, SlotNSlot game doesn’t have a pre-determined reel strips. Instead, it holds the paytable and the probability table and utilizes the seeds sent from the banker and the player to put into the PRNG and generates random numbers. Game results are determined on mappings between these random numbers and the paytable. This design is mathematically equivalent to the typical slot game design. SlotNSlot uses this design to extremely decrease the gas price required to do the computations.
 
@@ -175,13 +175,13 @@ _The team is open to any debates in any channel for improving the service. If yo
 
 * * *
 
-# 5. Pseudo Random Number Generator (PRNG)
+# 5. <a name="head13">Pseudo Random Number Generator (PRNG)</a>
 
-### 5.1 Motivation
+### 5.1 <a name="head14">Motivation</a>
 
 The main goal of PRNG design for SlotNSlot is to ensure “equal unpredictability” to both parties of the game, while keeping a fast response and low cost of transaction fee. In traditional designs where a central server generated and provided the random number, RNG was done by taking a mean of entropy, or “a seed” from the server. Implementing this design on smart contracts depends on the entity who commits the code, thus making it difficult to be used in a deterministic virtual machine. In this section, several prior implementations are described, and then the design used in SlotNSlot.
 
-### 5.2 Prior Attempts
+### 5.2 <a name="head15">Prior Attempts</a>
 
 One typical way to obtain a pseudorandom number from blockchain is to utilize the data in certain block, such as blockhash or timestamp. This method has been discussed for long, and it is well known that the miners have a chance of manipulating the odds. This is even a serious problem when the miner of the transaction generating the random number is either of slot participants.
 
@@ -193,7 +193,7 @@ iDice utilized an intermediary between blockchain and an external RNG service, O
 
 FunFair solved much of these issues by implementing a state channel design, which enables unlimited number of iterations off-chain with only the initiating and finalizing of the channel requires an on-chain interaction. The weak point here is that the results aren’t recorded on-chain in realtime, and exception handling comes as a serious problem, e.g. when either of participants suddenly disconnects from the channel.
 
-### 5.3 SlotNSlot Solution
+### 5.3 <a name="head16">SlotNSlot Solution</a>
 
 SlotNSlot deploys a hash chain commit & reveal scheme to both prevent manipulations and reduce transactions required. Using a commit & reveal scheme to accept seeds from users ensures no chance of manipulation and equal unpredictability. As this scheme is extended to a chained model, there's less need for transactions. A single round of commit & reveal would require 4 transactions with 2 users. In a chained model, every revelation is at the same time commitment to next round, thus reducing the transactions in half. However, in SlotNSlot design, players would want to change their betting choices(_betAmount_, _numLine_) in every bet. If the player was to reveal first in every bet, these betting choices could also be sent within the same transaction. But as the banker aborting the result is more serious than the player aborting, players had to be the last to reveal. For this reason, every betting would require exactly 3 transactions on the blockchain.
 
@@ -217,7 +217,7 @@ In the design, fairness is ensured with chained commit & reveal scheme. At the s
 
 * * *
 
-# 6. Team 
+# 6. <a name="head17">Team</a> 
 
 The team is currently working in a country where legislation on cryptocurrencies is not built. The country strictly bans online gambling with any currencies considered as valuable, domestic or global. Though a legislation doesn’t exist yet, the team still desires to avoid any means of legal issues in the region. For the time being, no exact identification of any team member will be revealed. The team sincerely appreciate generous understanding.
 
@@ -227,7 +227,7 @@ The team currently consists of 7 developers with degrees in Computer Science and
 
 * * *
 
-# 7. Profit Model
+# 7. <a name="head18">Profit Model</a>
 
 The major sources of profit are planned to be  
 * % fees from slot games, and  
@@ -241,7 +241,7 @@ Price model for Emojis will be determined in later stage of the project since it
 
 * * *
 
-# 8. SlotNSlot Token (SLT, subject to change)
+# 8. <a name="head19">SlotNSlot Token (SLT, subject to change)</a>
 
 SLT token is solely for dividend yields. Any profits made on SlotNSlot platform will be cumulated in its public contract, and distributed to token holders in proportion to the amount they hold. Total number of tokens will be fixed at the very first issuance and ever. To protect investors, tokens reserved for development team will be locked up to 365 days after the first revenue share is witnessed from the platform.
 
@@ -257,9 +257,9 @@ In future decisions when determining details about SlotNSlot token or any other 
 
 * * *
 
-# 9. Crowdsale (Subject to change)
+# 9. <a name="head20">Crowdsale (Subject to change)</a>
 
-### 9.1 Crowdsale Event
+### 9.1 <a name="head21">Crowdsale Event</a>
 
 **Start date**: Exactly 30 days after posting the _Crowdsale Details_ article.
 **End date**: Crowdsale event ends with the earliest among followings.
@@ -271,7 +271,7 @@ ii) 1 billion SLT issued
 **Foundation reserve**: At the end of crowdsale, tokens equivalent to 25% of amount issued during the crowdsale will be reserved for SlotNSlot team. Thus, the team would be holding 20% of the total tokens issued. These tokens will be locked up to the date 1 year after the very first profit share from the platform is witnessed.
 **Currencies**: Probably only Ether (ETH) will be accepted for the crowdsale. This is mainly because the fund raised during crowdsale period will be controlled with an upper bound on yearly withdrawal. Controlling this along with other currencies seems to be quite difficult at the moment. The team will be investigating possible breakthroughs including third-party services to accept several optional currencies.
 
-### 9.2 Investor Protection
+### 9.2 <a name="head22">Investor Protection</a>
 
 SlotNSlot token contracts and crowdsale funds contracts will be constructed in such way to support several methods to protect investors. These methodologies are to protect i) investors' token value, and ii) funds raised by investors.
 
@@ -287,7 +287,7 @@ The team would always try to keep **transparency on use of funds**. There will b
 
 Most importantly, investors will always have right to propose certain decisions on the project fund. With transpareny on the use of fund and protection on token values, investors will have clear, secure, and definite control over their investment. For more details and reasons for the crowdsale & fund details, refer to our Medium post on [_crowdsale details_](url=url).
 
-### 9.3 Use of Fund
+### 9.3 <a name="head23">Use of Fund</a>
 
  - Operational cost (40%)  
    - Office rent  
@@ -305,7 +305,7 @@ Most importantly, investors will always have right to propose certain decisions 
 
 * * *
 
-# Appendix
+# <a name="head24">Appendix</a>
 
 This part of documentation is to help understand the in-depth principles of SlotNSlot games, with brief comparison on traditional slot games. The explanations include arithmetic and algorithmic notations. For those who are solely concerned about business aspects of SlotNSlot, this part can be skipped.
 
