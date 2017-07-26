@@ -18,7 +18,7 @@
 ##### 5.3 [SlotNSlot Solution](#head16)
 #### 6. [Team](#head17)
 #### 7. [Profit Model](#head18)
-#### 8. [SlotNSlot Token (SLT)](#head19)
+#### 8. [SlotNSlot Token (SLOT)](#head19)
 #### 9. [Crowdsale](#head20)
 ##### 9.1 [Crowdsale Event](#head21)
 ##### 9.2 [Investor Protection](#head22)
@@ -241,13 +241,13 @@ Price model for Emojis will be determined in later stage of the project since it
 
 * * *
 
-# 8. <a name="head19">SlotNSlot Token (SLT, subject to change)</a> [[back to top]](#top)
+# 8. <a name="head19">SlotNSlot Token (SLOT, subject to change)</a> [[back to top]](#top)
 
-SLT token is solely for dividend yields. Any profits made on SlotNSlot platform will be cumulated in its public contract, and distributed to token holders in proportion to the amount they hold. Total number of tokens will be fixed at the very first issuance and ever. To protect investors, tokens reserved for development team will be locked up to 365 days after the first revenue share is witnessed from the platform.
+SLOT token is solely for dividend yields. Any profits made on SlotNSlot platform will be cumulated in its public contract, and distributed to token holders in proportion to the amount they hold. Total number of tokens will be fixed at the very first issuance and ever. To protect investors, tokens reserved for development team will be locked up to 365 days after the first revenue share is witnessed from the platform.
 
 For every 100,000 blocks mined in Ethereum, 95% of profit stacked in the contract will be distributed to token holders, and 5% will be left for buffers.
 
->_An alternative model was suggested by a potential investor, where stacked profits are used to buy out and burn SLT tokens. The team is developing a draft model for this, and will be discussing it on communities to find out if this would work._
+>_An alternative model was suggested by a potential investor, where stacked profits are used to buy out and burn SLOT tokens. The team is developing a draft model for this, and will be discussing it on communities to find out if this would work._
 
 In future decisions when determining details about SlotNSlot token or any other relevant, major guides will be as follows.
 
@@ -268,8 +268,8 @@ i) Two weeks after start date. [08:00 AM UTC, September 3rd 2017]
 ii) 100,000 ETH hard cap achieved.
 
 **Price**:  
-12,000 SLT = 1 ETH : 20% bonus during the first 24 hours  
-10,000 SLT = 1 ETH : after 24 hours until end of crowdsale event
+12,000 SLOT = 1 ETH : 20% bonus during the first 24 hours  
+10,000 SLOT = 1 ETH : after 24 hours until end of crowdsale event
 
 **Foundation reserve**: At the end of crowdsale, tokens equivalent to 25% of amount issued during the crowdsale will be reserved for SlotNSlot team. Thus, the team would be holding 20% of the total tokens issued. These tokens will be locked up to the date 1 year after the very first profit share from the platform is witnessed.
 
@@ -287,7 +287,7 @@ Any **remaining funds** after either successful deploy and shift of project to a
 
 The team would always try to keep **transparency on use of funds**. There will be a real time tracker of how much fund is used, aside the official webpage. At the same time, monthly reports on use of funds will be uploaded to communication channels as well.
 
-**Lock-ups** will be utilized to **protect investors' token values**. The reserve tokens for the team, 20% of total, will be locked up for 1 year as described above. Any investors with more than 10,000,000 SLT will receive tokens exceeding that amount with lock up for 100 days. An investor contributing for 30,000,000 SLT would have 10,000,000 SLT free to trade right after crowdsale, and 20,000,000 SLT locked up for 100 days. This is to prevent large investors pumping their ETH by dumping SLT.
+**Lock-ups** will be utilized to **protect investors' token values**. The reserve tokens for the team, 20% of total, will be locked up for 1 year as described above. Any investors with more than 10,000,000 SLOT will receive tokens exceeding that amount with lock up for 100 days. An investor contributing for 30,000,000 SLOT would have 10,000,000 SLOT free to trade right after crowdsale, and 20,000,000 SLOT locked up for 100 days. This is to prevent large investors pumping their ETH by dumping SLOT.
 
 Most importantly, investors will always have right to propose certain decisions on the project fund. With transpareny on the use of fund and protection on token values, investors will have clear, secure, and definite control over their investment. For more details and reasons for the crowdsale & fund details, refer to our Medium post on [_crowdsale details_](https://medium.com/@kkenji1024/better-ico-investors-must-be-protected-84b760fda5f0).
 
