@@ -1,29 +1,31 @@
+Last modification: August 1st 2017
+
 # <a name="top">Table of Contents</a>
 * * *
-#### 1. [Introduction](#head1)
-#### 2. [Market Analysis](#head2)
+### 1. [Introduction](#head1)
+### 2. [Market Analysis](#head2)
 ##### 2.1 [Market Size](#head3)
 ##### 2.2 [Typical Market Problem](#head4)
 ##### 2.3 [Ethereum Solution](#head5)
-#### 3. [SlotNSlot Platform](#head6)
+### 3. [SlotNSlot Platform](#head6)
 ##### 3.1 [Make or Play](#head7)
 ##### 3.2 [Multi Platform](#head8)
 ##### 3.3 [Send Emoji](#head9)
 ##### 3.4 [Fair & Transparent](#head10)
 ##### 3.5 [Low Cost](#head11)
-#### 4. [Game Design](#head12)
-#### 5. [Pseudo Random Number Generator (PRNG)](#head13)
+### 4. [Game Design](#head12)
+### 5. [Pseudo Random Number Generator (PRNG)](#head13)
 ##### 5.1 [Motivation](#head14)
 ##### 5.2 [Prior Attempts](#head15)
 ##### 5.3 [SlotNSlot Solution](#head16)
-#### 6. [Team](#head17)
-#### 7. [Profit Model](#head18)
-#### 8. [SlotNSlot Token (SLOT)](#head19)
-#### 9. [Crowdsale](#head20)
+### 6. [Team](#head17)
+### 7. [Profit Model](#head18)
+### 8. [SlotNSlot Token (SLOT)](#head19)
+### 9. [Crowdsale](#head20)
 ##### 9.1 [Crowdsale Event](#head21)
 ##### 9.2 [Investor Protection](#head22)
 ##### 9.3 [Use of Fund](#head23)
-#### [Appendix](#head24)
+### [Appendix](#head24)
 
 * * *
 
@@ -89,7 +91,7 @@ Lastly and most importantly, SlotNSlot uses a Pseudo Random Number Generator(PRN
 
 ### 3.1 <a name="head7">Make or Play</a> [[back to top]](#top)
 
-SlotNSlot is a platform that offers easy slot mechine creation for users who want to be a slot banker, and slots list with enough information for others who want to play. Unlike traditional online casinos, people in SlotNSlot have a chance to decide whether they will be a slot banker or just play slots others make. They may have a strategic option and make a strategic decision to win the game after considering their budget, slots list and etc. SlotNSlot team believe that this will bring a brand new pradigm to the scene.
+SlotNSlot is a platform where users can easily make slot machines with desired settings and play on those made by other users with the settings identifiable. Unlike traditional online casinos, users in SlotNSlot have a choice on whether they will be a slot banker and/or a player on other slots. They have a strategic decision to win the game after considering their budget, slots list and etc. SlotNSlot team believe that this will bring a brand new paradigm to the scene.
 
 Slot bankers are to determine some parameters of their slot machines to reap the most out of them, while generating the best experience for players visiting them. The most basic numbers to be determined are the total stake of ETH to wager on the specific machine(_totalStake_), and minimum/maximum bets allowed(_min_/_maxBet_). 
 
@@ -120,9 +122,9 @@ Players can utilize never-seen-before strategies in SlotNSlot. A simple example 
 
 ### 3.2 <a name="head8">Multi Platform</a> [[back to top]](#top)
 
-Much of online services are mobile dominant in recent days. SlotNSlot team is currently developing clients for both HTML5-based web and Android, and iOS will be supported soon enough. At the time of writing(as of July 20th 2017), there is no mobile slot games application running on Ethereum network. SlotNSlot team aims to develop a prototype and release the beta on Google Play Store in mid July, which will be the world first mobile slot game running on Ethereum network.
+Much of online services are mobile dominant in recent days. SlotNSlot team is currently developing clients for both Web and Android, and iOS will be supported soon enough. At the time of writing(as of August 1st 2017), there is no mobile slot games application running on Ethereum network. SlotNSlot team aims to develop a prototype and release the beta on Google Play Store within August 2017, which will be the world first mobile slot game running on Ethereum network.
 
-For the support of mobile application, the team is developing two major solutions. One is to accelerate Ethereum light node synchronization and transaction(contract) deployments. The other is to control possible issues caused by unstable network connections on mobile devices. SlotNSlot team will do the best to resolve these issues, and you will see the results on Google Play and AppStore, soon.
+For the support of mobile application, the team is developing two major solutions. One is the Android GETH wrapper with fast node synchronization to facilitate communication between Android native application and Ethereum network. The other is to control possible issues caused by unstable network connections on mobile devices. SlotNSlot team will do the best to resolve these issues, and you will see the results on SlotNSlot webpage, Google Play, and AppStore, soon.
 
 ![multi-platform](images/multiplatform.png)
 
@@ -144,7 +146,7 @@ Play histories and remaining balances are always available to both bankers and p
 
 While storing all play histories on blockchain, the games are played not waiting for the blockchain confirmations, but with specific verifications on pending transactions broadcast by both the banker and the player. Because the clients don't have to wait for the transactions to be confirmed on blockchain, the speed of gameplay is almost independent from the current average blocktime of Ethereum. Games are played and recorded with minimum on-chain transactions, thus reducing the cost significantly.
 	
-Unlike traditional “platform” businesses, SlotNSlot has no middleman. The platform owns itself. The transaction fee collected is also distributed to token holders. Both parties, i.e. bankers and players, can utilize the platform with extremely low cost, and if they hold some tokens, the cost might be reduced further, to a near-zero level.
+Unlike traditional “platform” businesses, SlotNSlot has no middleman. The platform owns itself. The percent fee collected is distributed to token holders. Both parties, i.e. bankers and players, can utilize the platform with extremely low cost, and if they hold some tokens, the cost might be reduced further, to a near-zero level.
 
 * * *
 
@@ -157,8 +159,9 @@ The team is currently working on both possibilities, i.e. typical and new design
 SlotNSlot game logic is as follows
  1. A banker creates a slot with slot_parameters. The paytable and probability matrix is created with those parameters, which are then stored in a new contract representing the slot session.
  2. A player enters the slot session, and make a spin with spin_parameters, which are sent to the slot session contract with PRNG seeds from both users.
- 3. Slot session contract creates random numbers, records the random numbers and relevant payout results in its internal storage, and sends the same data to the player’s client.
- 4. The client shows a result screen corresponding to the payout. If there are multiple cases, any one of them are chosen randomly. This randomness doesn’t need to be unpredictable since it doesn’t affect the slot game itself, i.e. the result is already determined.
+ 3. Slot session contract creates random numbers, records the random numbers and relevant payout results in its internal storage.
+ 4. Both users proactively watch transactions sent by each other, verify that they're sent as they should be, and computes the result and/or event of those transactions with the same logic the game contract uses. By this proactive method, the clients can proceed the game independent from the confirmation of those transactions.
+ 5. The client shows a result screen corresponding to the payout. If there are multiple cases, any one of them are chosen randomly. This randomness doesn’t need to be unpredictable since it doesn’t affect the slot game itself, i.e. the result is already determined.
 > Note that this logic doesn’t explain about the logic for PRNG.
  
 _The team is aware of some possible issues implementing this logic. The issues and team’s current response is as follows._
@@ -166,12 +169,12 @@ _The team is aware of some possible issues implementing this logic. The issues a
 * Multiple payline spins
 
 	* Unlike typical design, SlotNSlot’s logic doesn’t take into account the coinciding wins, and considers a multiple payline spin as a sequence of independent single payline spins. A player making multiple payline spin is not to modify the probability of results but to quickly iterate multiple spins over time. A mathematical explanation of this issue is included in Appendix.
-
+	
 * Different result screens on banker and player
 
 	* Though it might feel strange to have different result screens, it still doesn’t affect neither the fairness nor the result of the game. The logic is still preferred due to its extremely low gas consumption. A detailed description about the algorithm to generate the result screen is included in Appendix.
 
-_The team is open to any debates in any channel for improving the service. If you have any concerns and suggestions about the service, please contact the team with [Github](https://github.com/SlotNSlot/SlotNSlot), [Twitter](https://twitter.com/slotnslot), [Hipchat](https://www.hipchat.com/gIUbFZBvh) or any other communication channels._
+_The team is open to any debates in any channel for improving the service. If you have any concerns and suggestions about the service, please contact the team via [Github](https://github.com/SlotNSlot/SlotNSlot), [Subreddit](https://www.reddit.com/r/slotnslot), [Hipchat](https://www.hipchat.com/gIUbFZBvh), [Facebook](https://www.facebook.com/slotnslot.eth), [Twitter](https://twitter.com/slotnslot), and [Medium](https://medium.com/@kkenji1024) or any other communication channels._
 
 * * *
 
@@ -195,17 +198,21 @@ FunFair solved much of these issues by implementing a state channel design, whic
 
 ### 5.3 <a name="head16">SlotNSlot Solution</a> [[back to top]](#top)
 
-SlotNSlot deploys a hash chain commit & reveal scheme to both prevent manipulations and reduce transactions required. Using a commit & reveal scheme to accept seeds from users ensures no chance of manipulation and equal unpredictability. As this scheme is extended to a chained model, there's less need for transactions. A single round of commit & reveal would require 4 transactions with 2 users. In a chained model, every revelation is at the same time commitment to next round, thus reducing the transactions in half. However, in SlotNSlot design, players would want to change their betting choices(_betAmount_, _numLine_) in every bet. If the player was to reveal first in every bet, these betting choices could also be sent within the same transaction. But as the banker aborting the result is more serious than the player aborting, players had to be the last to reveal. For this reason, every betting would require exactly 3 transactions on the blockchain.
+SlotNSlot deploys a hash chain commit & reveal scheme to prevent manipulations and reduce transactions required. Using a commit & reveal scheme to accept seeds from users ensures no chance of manipulation and equal unpredictability. As this scheme is extended to a chained model, there's less need for transactions. A single round of commit & reveal would require 4 transactions with 2 users. In a chained model, every revelation is at the same time commitment to next round, thus reducing the transactions in half. However, in SlotNSlot design, players would want to change their betting choices(_betAmount_, _numLine_) in every bet. If the player was to reveal first in every bet, these betting choices could also be sent within the same transaction. But as the banker aborting the result is more serious than the player aborting, players had to be the last to reveal. For this reason, every betting would require exactly 3 transactions on the blockchain.
 
- 1. A player visits a slot machine, sends the last commit of hash chain, SHA<sup>R</sup>(N) with a specific amount of ETH to play on this slot. A successful confirmation of this transaction would modify the slot as occupied, and trigger an EVENT that would notify the banker that someone has visited his slot.
+As the clients proceed the games with proactive method, there may exist some case where transactions for later rounds are mined earlier than prior rounds. This will fail the verification on hash chain seeds. Therefore, multiple hash chains are used to initialize the game session. The number of hash chains should be set such that (number of chains) * (seconds per round) > (average block time). Still in this condition, the same problem can exist because the average block time is literally "average". This must be avoided by having a buffered delay of few seconds for every rounds when they proceed too faster than the smart contract.
 
- 2. The banker sends the last commit of hash chain. On confirmation of this transaction, the game session between these two specific "player" and "banker" will be initialized.
+A detailed procedure of the PRNG is as follows.
+
+ 1. A player visits a slot machine, sends the last commits of hash chains, _SHA<sup>R</sup>(N<sub>i</sub>)'s_, with a specific amount of ETH to play on this slot. A successful confirmation of this transaction would modify the slot as occupied, and trigger an EVENT that would notify the banker that someone has visited his slot.
+
+ 2. The banker sends the last commits of hash chains, _SHA<sup>R</sup>(M<sub>i</sub>)'s_. On confirmation of this transaction, the game session between these two specific "player" and "banker" will be initialized.
 
  3. The player sends betting parameters _betAmount_, and _numLine_ to the contract.
 
- 4. The banker verifies whether the player's transaction is valid. After successful verification, the banker reveals the preimage. To enable a faster response in the player's client, banker's client will send the same preimage with the Whisper protocol. Note that hashing this preimage would give the revelation of the banker in previous round.
+ 4. The banker verifies whether the player's transaction is valid. After successful verification, the banker reveals the preimage. Note that hashing this preimage would give the preimage of the banker in previous round in that hash chain.
 
- 5. Player's client begins to draw the resulting window with the player's preimage and the banker's preimage received from whisper. The player verifies whether the banker's transaction is valid. After successful verification, the player reveals the preimage.
+ 5. The player verifies whether the banker's transaction is valid. After successful verification, the player client begins to draw the result of the round, and reveals the preimage.
 
  6. A successful confirmation of all transactions in steps 3 to 5 will trigger the contract to process the round. The contract verifies both seeds, uses them to generate random numbers for the round, and stores the result.
 
@@ -213,17 +220,17 @@ SlotNSlot deploys a hash chain commit & reveal scheme to both prevent manipulati
 
 Steps 1 and 2 occurs exactly once everytime a player visits a slot. Steps 3 to 6 takes place for every betting player triggers. Step 6 is an automatic internal transaction that is triggered by the last transaction mined among steps 3 to 5. Thus, initializing the game session requires 2 transactions, and every betting in the session requires 3 transactions.
 
-In the design, fairness is ensured with chained commit & reveal scheme. At the same time, game results are recorded on-chain in atomic units, making the exception handling much easier as well as ensuring 100% transparency. _Whisper protocol_ would enable fast responses in player client. Although this implementation has relieved some of the prior challenges of RNGs on blockchain, it still suffers some intrinsic limitations, i.e. minimum transactions required. The team will consistently keep its efforts in developing a better design of RNG, especially in response to modifications in Ethereum blockchain: Metropolis, Casper(PoS), Serenity, etc.
+In the design, fairness is ensured with chained commit & reveal scheme. At the same time, game results are recorded on-chain in atomic units, making the exception handling much easier as well as ensuring 100% transparency. _Whisper protocol_ would enable fast responses in player client. Although this implementation has relieved some of the prior challenges of RNGs on blockchain, it still suffers some intrinsic limitations, i.e. minimum transactions required. The team will consistently keep its efforts in developing a better design of PRNG, especially in response to modifications in Ethereum blockchain: Metropolis, Casper(PoS), Serenity, etc.
 
 * * *
 
 # 6. <a name="head17">Team</a> [[back to top]](#top)
 
-The team is currently working in a country where legislation on cryptocurrencies is not built. The country strictly bans online gambling with any currencies considered as valuable, domestic or global. Though a legislation doesn’t exist yet, the team still desires to avoid any means of legal issues in the region. For the time being, no exact identification of any team member will be revealed. The team sincerely appreciate generous understanding.
+The team is currently working in a country where legislation on cryptocurrencies is not built. The country strictly bans online gambling with any currencies considered as valuable, domestic or global. Though a legislation doesn’t exist yet, the team still desires to avoid any means of legal issues in the region. For the time being, no exact identification of any team member will be revealed. The team would sincerely appreciate generous understanding.
 
-Instead of posting personal information, the team will validate credibility by source codes and open communications on the web. The team would appreciate and diligently participate in any means of debates, questions, corrections, requests, and feedbacks on the relevant communication channels. Currently this will include the team’s [Github](https://github.com/SlotNSlot/SlotNSlot), [Twitter](https://twitter.com/slotnslot), [Hipchat](https://www.hipchat.com/gIUbFZBvh), and [Medium](https://medium.com/@kkenji1024). With the concept of Decentralized Autonomous Organization(DAO) in mind, the team’s major role is believed to be developing core smart contracts to build a decentralized application. The platform will then run on an autonomous consensus between token holders.
+Instead of posting personal information, the team will validate credibility by source codes and open communications on the web. The team would appreciate and diligently participate in any means of debates, questions, corrections, requests, and feedbacks on the relevant communication channels. Currently this will include the team’s [Github](https://github.com/SlotNSlot/SlotNSlot), [Subreddit](https://www.reddit.com/r/slotnslot), [Hipchat](https://www.hipchat.com/gIUbFZBvh), [Facebook](https://www.facebook.com/slotnslot.eth), [Twitter](https://twitter.com/slotnslot), and [Medium](https://medium.com/@kkenji1024). With the concept of Decentralized Autonomous Organization(DAO) in mind, the team’s major role is believed to be developing core smart contracts to build a decentralized application. The platform will then run on an autonomous consensus between token holders.
 
-The team currently consists of 7 developers with degrees in Computer Science and Electronic Engineering, on top of years of experience in relevant fields, 1 UI/UX designer with great skills and experience, and 2 project managers who are serial entrepreneurs as well. The team works in a decent work environment where it can make quick responses and decisions while operating the tasks efficiently.
+The team currently consists of 7 developers with degrees in Computer Science and Electronic Engineering, on top of +40 years of experience in relevant fields, 1 UI/UX designer with great skills and experience, and 2 project managers who are serial entrepreneurs. The team works in a decent work environment where it can make quick responses and decisions while operating the tasks efficiently.
 
 * * *
 
@@ -243,21 +250,31 @@ Price model for Emojis will be determined in later stage of the project since it
 
 # 8. <a name="head19">SlotNSlot Token (SLOT, subject to change)</a> [[back to top]](#top)
 
-SLOT token is solely for dividend yields. Any profits made on SlotNSlot platform will be cumulated in its public contract, and distributed to token holders in proportion to the amount they hold. Total number of tokens will be fixed at the very first issuance and ever. To protect investors, tokens reserved for development team will be locked up to 365 days after the first revenue share is witnessed from the platform.
+SLOT token is solely for profit shares. There're currently three possible profit share models on the list. Either one of them, or any other suggested by the community and the investors, will be implemented before service launch on Mainnet.
 
-For every 100,000 blocks mined in Ethereum, 95% of profit stacked in the contract will be distributed to token holders, and 5% will be left for buffers.
+**CASE1: Direct Distribution**
 
->_An alternative model was suggested by a potential investor, where stacked profits are used to buy out and burn SLOT tokens. The team is developing a draft model for this, and will be discussing it on communities to find out if this would work._
+Any profit made on SlotNSlot platform will be accumulated in its public contract, and distributed to token holders in proportion to the amount they hold. Total number of tokens will be fixed at the very first issuance and ever.
+
+For every 100,000 blocks (or blocks equivalent to 30 days) mined in Ethereum, 95% of profit stacked in the contract will be distributed to token holders, and 5% will be left for buffers.
+
+**CASE2: Highest Bid Buyback**
+
+For every 100,000 blocks, profits are accumulated, and token holders can bid SLOT/ETH price and amount of SLOT to sell. With a buffer of 5%, 95% of accumulated profit will be used to buy from the highest bids as much as it can.
+
+**CASE3: Dutch Buyback**
+
+For every 100,000 blocks, the OPCODE in the profit contract points to a floating price of SLOT/ETH, which starts at an extremely high value down to a moderately low. Any valid transaction sending SLOTs to the contract would directly sell those SLOTs at the price at the moment. Price would decrease discretely, say every 100 blocks, such that token holders can be assured their transactions are mined at the price they want. The advantage in this model is that the exchange between SLOT and ETH is triggered with minimum transactions, thus high efficiency in gasPrice as a whole.
 
 In future decisions when determining details about SlotNSlot token or any other relevant, major guides will be as follows.
 
-- In determining the details of tokens and crowdsale, embrace as much suggestions from the communities as possible.
+- Embrace as much suggestions from the community as possible.
 - Every aspect would be determined with investor benefits and improvement of the project as top priorities.
-- It should never harm the Ethereum & DApp society.
+- It should never harm the Ethereum & DApp society and crypto space.
 
 * * *
 
-# 9. <a name="head20">Crowdsale (Subject to change)</a> [[back to top]](#top)
+# 9. <a name="head20">Crowdsale</a> [[back to top]](#top)
 
 ### 9.1 <a name="head21">Crowdsale Event</a> [[back to top]](#top)
 
