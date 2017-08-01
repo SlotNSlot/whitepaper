@@ -278,7 +278,7 @@ In future decisions when determining details about SlotNSlot token or any other 
 
 ### 9.1 <a name="head21">Crowdsale Event</a> [[back to top]](#top)
 
-**Start date**: 08:00 AM UTC, August 20th 2017. (exactly 30 days after posting [_crowdsale details_](https://medium.com/@kkenji1024/better-ico-investors-must-be-protected-84b760fda5f0))  
+**Start date**: [08:00 AM UTC, August 20th 2017]. (exactly 30 days after posting [_crowdsale details_](https://medium.com/@kkenji1024/better-ico-investors-must-be-protected-84b760fda5f0))  
 
 **End date**: Crowdsale event ends with the earliest among followings.  
 i) Two weeks after start date. [08:00 AM UTC, September 3rd 2017]  
