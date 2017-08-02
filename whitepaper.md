@@ -216,7 +216,7 @@ A detailed procedure of the PRNG is as follows.
 
  6. A successful confirmation of all transactions in steps 3 to 5 will trigger the contract to process the round. The contract verifies both seeds, uses them to generate random numbers for the round, and stores the result.
 
-![randomNumberGenerator](images/randomnumbergenerator.png)
+![randomNumberGenerator](images/randomNumberGenerator_170802.png)
 
 Steps 1 and 2 occurs exactly once everytime a player visits a slot. Steps 3 to 6 takes place for every betting player triggers. Step 6 is an automatic internal transaction that is triggered by the last transaction mined among steps 3 to 5. Thus, initializing the game session requires 2 transactions, and every betting in the session requires 3 transactions.
 
