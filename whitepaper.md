@@ -281,8 +281,8 @@ In future decisions when determining details about SlotNSlot token or any other 
 **Start date**: [08:00 AM UTC, August 20th 2017]. (exactly 30 days after posting [_crowdsale details_](https://medium.com/@kkenji1024/better-ico-investors-must-be-protected-84b760fda5f0))  
 
 **End date**: Crowdsale event ends with the earliest among followings.  
-i) Two weeks after start date. [08:00 AM UTC, September 3rd 2017]  
-ii) 100,000 ETH hard cap achieved.
+i) Four weeks after start date. [08:00 AM UTC, September 17th 2017]  
+ii) 40,000 ETH hard cap achieved.
 
 **Price**:  
 12,000 SLOT = 1 ETH : 20% bonus during the first 24 hours  
@@ -296,7 +296,7 @@ ii) 100,000 ETH hard cap achieved.
 
 SlotNSlot token contracts and crowdsale funds contracts will be constructed in such way to support several methods to protect investors. These methodologies are to protect i) investors' token value, and ii) funds raised by investors.
 
-There will be an **yearly upper bound** on use of funds, which will initially set to 10,000 ETH. Any withdrawal of the funds within one year exceeding that amount will trigger a proposal of voting to the investors. The proposal then will be announced to all relevant communication channels, communities, and websites, of course including the SlotNSlot official webpage.
+There will be an **quarterly upper bound** on use of funds, which will be initially set to 2,500 ETH. Any withdrawal of the funds within one quarter exceeding that amount will trigger a proposal of voting to the investors. The proposal then will be announced to all relevant communication channels, communities, and websites, of course including the SlotNSlot official webpage.
 
 Proposals will be announced for a period long enough to notify most investors, and thereafter investors will have 72 hours to vote on the proposal. More than 50% of voters agreeing to the proposal would accept additional use of fund. Investors will also have chances to make proposals to modify the yearly cap.
 
