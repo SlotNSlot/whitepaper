@@ -288,7 +288,7 @@ ii) 40,000 ETH hard cap achieved.
 12,000 SLOT = 1 ETH : 20% bonus during the first 24 hours  
 10,000 SLOT = 1 ETH : after 24 hours until end of crowdsale event
 
-**Foundation reserve**: At the end of crowdsale, tokens equivalent to 25% of amount issued during the crowdsale will be reserved for SlotNSlot team. Thus, the team would be holding 20% of the total tokens issued. These tokens will be locked up to the date 1 year after the very first profit share from the platform is witnessed.
+**Foundation reserve**: At the end of crowdsale, tokens equivalent to 25% of amount issued during the crowdsale will be reserved for SlotNSlot team. Thus, the team would be holding 20% of the total tokens issued. These tokens will be locked up for 1 year after the end of crowdsale period.
 
 **Currencies**: Probably only Ether (ETH) will be accepted for the crowdsale. This is mainly because the fund raised during crowdsale period will be controlled with an upper bound on yearly withdrawal. Controlling this along with other currencies seems to be quite difficult at the moment. The team will be investigating possible breakthroughs including third-party services to accept several optional currencies.
 
