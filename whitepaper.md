@@ -53,7 +53,7 @@ Online gambling market volume was 37.91B USD in 2015, and is forecasted to grow 
 
 As an example of gambling on Ethereum, a simple “dice” gambling service had 13,684 ETH user winnings with more than 55,000 bets over 1 year of service. They offers several dices with different win rates, from 5% to 90%. If players bet uniformly among those dices, the house earning is expected to be roughly 100,000ETHs. This is a revenue equivalent of 21.0M USD. (210 USD/ETH, as of July 20th 2017)
 
-Another similar service had roughly 7,026 bets with 4,513 ETH user winnings over roughly 100 days, as of July 20th 2017. Though the estimated revenue couldn’t be obtained due to its dynamic win rates and payout modified by the service provider, the projection from the settings at the time of writing gives 10,689 total bettings, which addes up to 37,411 over one year with a conservative assumption that it will neither grow nor diminish. This is a revenue equivalent of 7.8M USD. (210 USD/ETH, as of July 20th 2017)
+Another similar service had roughly 7,026 bets with 4,513 ETH user winnings over roughly 100 days, as of July 20th 2017. Though the estimated revenue couldn’t be obtained due to its dynamic win rates and payout modified by the service provider, the projection from the settings at the time of writing gives 10,689 ETH total bettings, which addes up to 37,411 ETH over one year with a conservative assumption that it will neither grow nor diminish. This is a revenue equivalent of 7.8M USD. (210 USD/ETH, as of July 20th 2017)
 
 With the estimated 55.19B USD global online gambling market in 2020, roughly 70% are coming from slots, 38.63B USD. Following table would demonstrate some estimates with several market penetration scenarios, from 1% to 20%.
 
