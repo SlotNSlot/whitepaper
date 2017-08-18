@@ -1,4 +1,6 @@
-Last modification: August 14th 2017
+Last modification: August 19th 2017
+
+# SlotNSlot [ICO is cancelled](https://medium.com/@kkenji1024/ico-cancelled-976a5a725388) indefinitely. 
 
 # <a name="top">Table of Contents</a>
 * * *
@@ -276,21 +278,23 @@ In future decisions when determining details about SlotNSlot token or any other 
 
 # 9. <a name="head20">Crowdsale</a> [[back to top]](#top)
 
-### 9.1 <a name="head21">Crowdsale Event</a>
+# SLOT crowdsale is [cancelled indefinitely](https://medium.com/@kkenji1024/ico-cancelled-976a5a725388).
 
-**Start date**: [08:00 AM UTC, August 20th 2017]. (exactly 30 days after posting [_crowdsale details_](https://medium.com/@kkenji1024/better-ico-investors-must-be-protected-84b760fda5f0))  
+### <s>9.1 <a name="head21">Crowdsale Event</a></s>
 
-**End date**: Crowdsale event ends with the earliest among followings.  
+<s>**Start date**: [08:00 AM UTC, August 20th 2017]. (exactly 30 days after posting [_crowdsale details_](https://medium.com/@kkenji1024/better-ico-investors-must-be-protected-84b760fda5f0))</s>  
+
+<s>**End date**: Crowdsale event ends with the earliest among followings.  
 i) Four weeks after start date. [08:00 AM UTC, September 17th 2017]  
-ii) 40,000 ETH hard cap achieved.
+ii) 40,000 ETH hard cap achieved.</s>
 
-**Price**:  
+<s>**Price**:  
 12,000 SLOT = 1 ETH : 20% bonus during the first 24 hours  
-10,000 SLOT = 1 ETH : after 24 hours until end of crowdsale event
+10,000 SLOT = 1 ETH : after 24 hours until end of crowdsale event</s>
 
-**Foundation reserve**: At the end of crowdsale, tokens equivalent to 25% of amount issued during the crowdsale will be reserved for SlotNSlot team. Thus, the team would be holding 20% of the total tokens issued. These tokens will be locked up for 1 year after the end of crowdsale period.
+<s>**Foundation reserve**: At the end of crowdsale, tokens equivalent to 25% of amount issued during the crowdsale will be reserved for SlotNSlot team. Thus, the team would be holding 20% of the total tokens issued. These tokens will be locked up for 1 year after the end of crowdsale period.</s>
 
-**Currencies**: Probably only Ether (ETH) will be accepted for the crowdsale. This is mainly because the fund raised during crowdsale period will be controlled with an upper bound on yearly withdrawal. Controlling this along with other currencies seems to be quite difficult at the moment. The team will be investigating possible breakthroughs including third-party services to accept several optional currencies.
+<s>**Currencies**: Probably only Ether (ETH) will be accepted for the crowdsale. This is mainly because the fund raised during crowdsale period will be controlled with an upper bound on yearly withdrawal. Controlling this along with other currencies seems to be quite difficult at the moment. The team will be investigating possible breakthroughs including third-party services to accept several optional currencies.</s>
 
 ### 9.2 <a name="head22">Investor Protection</a>
 
